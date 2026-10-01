@@ -1,0 +1,2 @@
+import {Outlet} from 'react-router-dom';import {useState} from 'react';import Sidebar from './Sidebar';import Header from './Header';
+export default function TherapistLayout(){const[open,setOpen]=useState(false);return <div className="app-shell"><Sidebar open={open} onClose={()=>setOpen(false)}/><div className="main-shell"><Header onMenuClick={()=>setOpen(true)}/><main className="page-content"><Outlet/></main></div></div>}

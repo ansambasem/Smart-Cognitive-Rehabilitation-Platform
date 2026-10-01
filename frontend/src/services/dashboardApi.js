@@ -1,0 +1,1 @@
+const API_URL=import.meta.env.VITE_API_URL||'http://localhost:8000/api';export async function getTherapistDashboard(){const r=await fetch(`${API_URL}/therapist/dashboard`);if(!r.ok)throw new Error('تعذر تحميل بيانات لوحة التحكم');return r.json();}

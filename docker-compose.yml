@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: cognitive-rehab-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: cognitive_rehab
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - '5432:5432'
+    volumes:
+      - cognitive_rehab_pgdata:/var/lib/postgresql/data
+volumes:
+  cognitive_rehab_pgdata:
